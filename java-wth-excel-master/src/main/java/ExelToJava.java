@@ -5,6 +5,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.util.*;
 
 public class ExelToJava {
@@ -15,7 +16,7 @@ public class ExelToJava {
     }
 
     private static void readExcelFile() throws IOException {
-        XSSFWorkbook workbook = new XSSFWorkbook(new FileInputStream("/home/abdullah/Downloads/Documents/Daily Flight Price Tracking_1.xlsx"));
+        XSSFWorkbook workbook = new XSSFWorkbook(new FileInputStream("src/main/java/static/Daily Flight Price Tracking_1.xlsx"));
         XSSFSheet flightsSheet = workbook.getSheet("Flights 2022");
         List<src.main.java.flights> flights = new ArrayList<>();
 //        TODO get sheet of thresholdsSheet
