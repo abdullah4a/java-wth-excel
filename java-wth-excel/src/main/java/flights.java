@@ -25,6 +25,27 @@ public class flights {
     public flights() {
     }
 
+    public flights(Long id, Date date, String origin, String destination, Long dealPrice, Long normalPrice, Date departureDate, Date returnDate, Long numberOfStops, double percentOff, boolean goodDeal, String airline, String departureAirport, String returningAirport, String sentToPremium, String linkToFlights, String sentToFree, String remarks) {
+        this.id = id;
+        this.date = date;
+        this.origin = origin;
+        this.destination = destination;
+        this.dealPrice = dealPrice;
+        this.normalPrice = normalPrice;
+        this.departureDate = departureDate;
+        this.returnDate = returnDate;
+        this.numberOfStops = numberOfStops;
+        this.percentOff = percentOff;
+        this.goodDeal = goodDeal;
+        this.airline = airline;
+        this.departureAirport = departureAirport;
+        this.returningAirport = returningAirport;
+        this.sentToPremium = sentToPremium;
+        this.linkToFlights = linkToFlights;
+        this.sentToFree = sentToFree;
+        this.remarks = remarks;
+    }
+
     public Long getId() {
         return id;
     }
