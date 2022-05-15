@@ -2,7 +2,7 @@ package src.main.java;
 
 import java.util.Date;
 
-public class flights {
+public class Flights {
     private Long id;
     private Date date;
     private String origin;
@@ -22,10 +22,10 @@ public class flights {
     private String sentToFree;
     private String remarks;
 
-    public flights() {
+    public Flights() {
     }
 
-    public flights(Long id, Date date, String origin, String destination, Long dealPrice, Long normalPrice, Date departureDate, Date returnDate, Long numberOfStops, double percentOff, boolean goodDeal, String airline, String departureAirport, String returningAirport, String sentToPremium, String linkToFlights, String sentToFree, String remarks) {
+    public Flights(Long id, Date date, String origin, String destination, Long dealPrice, Long normalPrice, Date departureDate, Date returnDate, Long numberOfStops, double percentOff, boolean goodDeal, String airline, String departureAirport, String returningAirport, String sentToPremium, String linkToFlights, String sentToFree, String remarks) {
         this.id = id;
         this.date = date;
         this.origin = origin;
