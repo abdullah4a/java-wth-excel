@@ -29,7 +29,7 @@ public class ExelToJava {
                             ? Double.parseDouble(row.getCell(8).getRawValue()) : null;
                     if (percentOff != null && percentOff > 0.60 && percentOff < 0.99) {
                         var flight = new src.main.java.Flights();
-                        flight.setId(count++);
+                        flight.setId(UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE);
                         flight.setDate(row.getCell(0).getDateCellValue());
                         flight.setOrigin(row.getCell(1).getRawValue());
                         flight.setDestination(row.getCell(2).getRawValue());
@@ -47,7 +47,7 @@ public class ExelToJava {
                         flight.setSentToPremium(row.getCell(14).getRawValue());
                         flight.setSentToFree(row.getCell(15).getRawValue());
                         flight.setRemarks(row.getCell(16).getRawValue());
-                        System.out.println(flight);
+                        System.out.println(flight.getDate());
                         flights.add(flight);
                     }
                 }
