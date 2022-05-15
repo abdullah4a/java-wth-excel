@@ -90,7 +90,6 @@ public class ExelToJava {
             for (var threshold : thresholds) {
                 if (Objects.equals(threshold.getDestination(), flight.getDestination())) {
                     if (flight.getDealPrice() < threshold.getDealPrice()) {
-                        System.out.println(flight.getDestination() + "\n" + threshold.getDealPrice());
                         newFlights.add(flight);
                         break;
                     }
