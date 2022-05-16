@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d3cfb15a-ec79-4800-8dee-96de10b027f8" name="Changes" comment="program fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ExelToJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExelToJava.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +45,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SendMail">
     <configuration name="ExelToJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ExelToJava" />
       <module name="exceltojava" />
@@ -52,8 +53,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SendMail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SendMail" />
+      <module name="exceltojava" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SendMail" />
         <item itemvalue="Application.ExelToJava" />
       </list>
     </recent_temporary>
@@ -87,7 +96,8 @@
       <workItem from="1652614806354" duration="784000" />
       <workItem from="1652615832439" duration="4481000" />
       <workItem from="1652621561080" duration="185000" />
-      <workItem from="1652674030447" duration="2170000" />
+      <workItem from="1652674030447" duration="5341000" />
+      <workItem from="1652686987183" duration="594000" />
     </task>
     <task id="LOCAL-00001" summary="getting Files and converting them into Array">
       <created>1652526265200</created>
@@ -145,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652618012049</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="program fixed">
+      <created>1652677940166</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652677940166</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +193,16 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="2" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ExelToJava.java</url>
+          <line>132</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ExelToJava.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
