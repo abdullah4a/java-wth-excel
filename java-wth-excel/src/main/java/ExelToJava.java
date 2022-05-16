@@ -1,11 +1,12 @@
+import org.apache.commons.codec.binary.StringUtils;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.xmlbeans.impl.util.Diff;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class ExelToJava {
     public static void main(String[] args) throws IOException {
@@ -14,7 +15,7 @@ public class ExelToJava {
 
     private static void readExcelFile() throws IOException {
         XSSFWorkbook workbook = new XSSFWorkbook(new FileInputStream("src/main/java/static/Daily Flight Price Tracking_1.xlsx"));
-        compareLists(workbook);
+        var list = compareLists(workbook);
     }
 
     private static List<Thresholds> getThresholds(XSSFWorkbook workbook) {
@@ -42,13 +43,15 @@ public class ExelToJava {
     private static List<src.main.java.Flights> getFlights(XSSFWorkbook workbook) {
         XSSFSheet flightsSheet = workbook.getSheet("Flights 2022");
         List<src.main.java.Flights> flights = new ArrayList<>();
-        try {
-//        Loop For Flights; get flights and save in the list if they fulfill Requirements
-            for (var rows : flightsSheet) {
-                if (rows.getRowNum() > 0 && rows.getCell(0).getDateCellValue() != null) {
-                    Date currentDate = new Date();
-                    XSSFRow row = flightsSheet.getRow(rows.getRowNum());
-                    var date = row.getCell(0).getDateCellValue();
+        //        Loop For Flights; get flights and save in the list if they fulfill Requirements
+        for (var rows : flightsSheet) {
+            if (rows.getRowNum() > 0 && rows.getCell(0).getDateCellValue() != null) {
+                Date currentDate = new Date();
+                XSSFRow row = flightsSheet.getRow(rows.getRowNum());
+                var date = row.getCell(0).getDateCellValue();
+                boolean getSentRecords = StringUtils.equals(row.getCell(14).getStringCellValue(), "Yes");
+                var difference = currentDate.getTime() - date.getDate();
+                if (difference > 20 && getSentRecords) {
                     if (currentDate.getMonth() == date.getMonth() && currentDate.getDate() == date.getDate()) {
                         var percentOff = row.getCell(8).getRawValue().startsWith(String.valueOf(0)) ? Double.parseDouble(row.getCell(8).getRawValue()) : null;
                         if (percentOff != null && percentOff > 0.60 && percentOff < 0.99) {
@@ -71,13 +74,15 @@ public class ExelToJava {
                             flight.setSentToPremium(row.getCell(14).getStringCellValue());
                             flight.setSentToFree(row.getCell(15).getStringCellValue());
                             flight.setRemarks(row.getCell(16).getStringCellValue());
+                            System.out.println(flight.getDealPrice());
                             flights.add(flight);
                         }
+                    } else {
+                        System.out.println("No Record of that date Found.\nPlease Update workbook.");
+                        break;
                     }
                 }
             }
-        } catch (RuntimeException e) {
-            throw e;
         }
         return flights;
     }

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3cfb15a-ec79-4800-8dee-96de10b027f8" name="Changes" comment="program fixed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ExelToJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExelToJava.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +85,9 @@
       <workItem from="1652596207993" duration="250000" />
       <workItem from="1652596751516" duration="6687000" />
       <workItem from="1652614806354" duration="784000" />
-      <workItem from="1652615832439" duration="2071000" />
+      <workItem from="1652615832439" duration="4481000" />
+      <workItem from="1652621561080" duration="185000" />
+      <workItem from="1652674030447" duration="2170000" />
     </task>
     <task id="LOCAL-00001" summary="getting Files and converting them into Array">
       <created>1652526265200</created>
@@ -135,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652617297746</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="program fixed">
+      <created>1652618012049</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652618012049</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
